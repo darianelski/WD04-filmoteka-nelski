@@ -445,6 +445,20 @@ a.badge:active {
 .card > .title-6 {
   margin-top: 0;
 }
+
+.card__header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: top;
+  align-items: top;
+}
+.card__header>* {
+  margin-top: 0 !important;
+}
 .card__img {
   width: 100%;
   margin-bottom: 15px;
@@ -1157,6 +1171,21 @@ fieldset {
   background-image: -ms-linear-gradient(90deg, #08711c 0%, #2cb951 100%);
   color: #fff;
   margin-bottom: 20px;
+}
+
+.info-notification {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.3;
+  background-color: #E3AB00;
+  border-radius: 5px;
+  color: #FFF;
+  padding: 5px 15px;
+}
+
+.info-notification p {
+  color: #FFF;
 }
 
 .notify--success p {
@@ -1964,6 +1993,24 @@ h6.contacts__item-name {
   border-color: #990101;
   background-color: #990101;
 }
+
+.button--edit {
+  font-size: 14px;
+  padding: 6px 20px;
+  padding-bottom: 0.6em;
+ /* height: 2.25em;*/
+}
+
+/*a.button--removesmall,
+a.button--removesmall:hover,
+a.button--removesmall:focus,
+.user-content a.button--removesmall,
+.user-content a.button--removesmall:hover,
+.user-content a.button--removesmall:focus {
+  color: #FFF;
+  text-decoration: none;
+}
+*/
 .feedback-page .user-message__text p {
   line-height: 1.5em;
 }

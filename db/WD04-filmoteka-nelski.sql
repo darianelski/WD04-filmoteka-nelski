@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 18, 2018 at 09:17 PM
+-- Generation Time: Sep 19, 2018 at 09:47 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.1.12
 
@@ -39,13 +39,14 @@ CREATE TABLE `films` (
 
 INSERT INTO `films` (`id`, `title`, `genre`, `year`) VALUES
 (1, 'Облачный атлас', 'драма', 2012),
-(2, 'Такси 2', 'комедия', 2000),
 (14, 'Пианист', 'драма', 2002),
-(15, 'Призрак', 'триллер', 2009),
+(15, 'Призрак', 'триллер, драма', 2009),
 (16, 'Пиджак', 'детектив', 2005),
 (17, 'Академия смерти', 'драма', 2004),
 (18, 'Песня для изгоя', 'драма', 2003),
-(19, 'Сто дней после детства', 'мелодрама', 1975);
+(19, 'Сто дней после детства', 'драма, мелодрама', 1975),
+(22, 'Белый олеандр', 'драма', 2002),
+(23, 'Читая мысли', 'триллер, детектив', 2005);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +66,7 @@ ALTER TABLE `films`
 -- AUTO_INCREMENT for table `films`
 --
 ALTER TABLE `films`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
