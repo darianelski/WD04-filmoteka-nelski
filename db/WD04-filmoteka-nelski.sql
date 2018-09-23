@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 19, 2018 at 09:47 PM
+-- Generation Time: Sep 23, 2018 at 03:09 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.1.12
 
@@ -30,23 +30,25 @@ CREATE TABLE `films` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
   `genre` text NOT NULL,
-  `year` int(11) NOT NULL
+  `year` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `photo` char(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `films`
 --
 
-INSERT INTO `films` (`id`, `title`, `genre`, `year`) VALUES
-(1, 'Облачный атлас', 'драма', 2012),
-(14, 'Пианист', 'драма', 2002),
-(15, 'Призрак', 'триллер, драма', 2009),
-(16, 'Пиджак', 'детектив', 2005),
-(17, 'Академия смерти', 'драма', 2004),
-(18, 'Песня для изгоя', 'драма', 2003),
-(19, 'Сто дней после детства', 'драма, мелодрама', 1975),
-(22, 'Белый олеандр', 'драма', 2002),
-(23, 'Читая мысли', 'триллер, детектив', 2005);
+INSERT INTO `films` (`id`, `title`, `genre`, `year`, `description`, `photo`) VALUES
+(1, 'Облачный атлас', 'драма', 2012, 'Шесть историй — пять реинкарнаций, происходящих в разное время, тесно переплетаются между собой…', ''),
+(14, 'Пианист', 'драма', 2002, 'Фильм снят по автобиографии Владислава Шпильмана, одного из лучших пианистов Польши 30-х годов прошлого века. Главный герой фильма — Владек — занимается искусством до тех пор, пока территорию Польши не занимают нацисты. Жизнь всех евреев меняется: их помещают в Варшавское гетто, запрещают работать, унижают, заставляют носить отличительные повязки, а через некоторое время отправляют в концлагерь.', ''),
+(15, 'Призрак', 'триллер, драма', 2009, '', ''),
+(16, 'Пиджак', 'детектив', 2005, '', ''),
+(17, 'Академия смерти', 'драма', 2004, '', ''),
+(18, 'Песня для изгоя', 'драма', 2003, '', ''),
+(19, 'Сто дней после детства', 'драма, мелодрама', 1975, '', ''),
+(22, 'Белый олеандр', 'драма', 2002, '', ''),
+(23, 'Читая мысли', 'триллер, детектив', 2005, '', '');
 
 --
 -- Indexes for dumped tables
@@ -66,7 +68,7 @@ ALTER TABLE `films`
 -- AUTO_INCREMENT for table `films`
 --
 ALTER TABLE `films`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
