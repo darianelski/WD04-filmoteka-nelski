@@ -4,14 +4,9 @@
 require('config.php');
 require('database.php');
 $link = db_connect();
-
 require('models/films.php');
 
-
-
-// Update film data in DB
-if (array_key_exists('updateFilm', $_POST)) {
-	// Обработка ошибок
+if (array_key_exists('newFilm', $_POST)) {
 
 	if ($_POST['title'] == '') {
 		$errors[] = "<p>Необходимо ввести название фильма!</p>";
@@ -25,23 +20,21 @@ if (array_key_exists('updateFilm', $_POST)) {
 		$errors[] = "<p>Необходимо ввести год выхода фильма!</p>";
 	}
 
-	// Еси ошибок нет, сохраняем фильм
+	// Если ошибок нет, сохраняем фильм
 	if (empty($errors)) {
-			$result = film_update($link, $_POST['title'], $_POST['genre'], $_POST['year'], $_POST['description'], $_GET['id']);
+		$result = new_film($link, $_POST['title'], $_POST['genre'], $_POST['year'], $_POST['description']);
 
-			if ($result) {
-				$resultSuccess = "<p>Фильм успешно обновлен!</p>";
-			} else {
-				$resultError = "<p>Ошибка обновления фильма. Попробуйте еще раз.</p>";
-			}
+		if ($result) {
+			$resultSuccess = "<p>Фильм успешно добавлен!</p>";
+		} else {
+			$resultError = "<p>Ошибка добавления фильма. Попробуйте еще раз.</p>";
 		}
+	}
 }
-
-$film = get_film($link, $_GET['id']);
 
 include('views/head.tpl');
 include('views/notifications.tpl');
-include('views/edit-film.tpl');
+include('views/new-film.tpl');
 include('views/footer.tpl');
 
 ?>
