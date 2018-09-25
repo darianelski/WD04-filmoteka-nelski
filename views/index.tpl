@@ -12,8 +12,23 @@
 					<div class="card__header">
 						<h4 class="title-4"><?=$film['title']?></h4>
 						<div class="buttons">
-							<a href="edit.php?id=<?=$film['id']?>" class="button button--edit">Редактировать</a>
-							<a href="?action=delete&id=<?=$film['id']?>" class="button button--removesmall">Удалить</a>
+
+							<?php 
+
+							if (isset($_SESSION['user'])) {
+								if ($_SESSION['user'] == 'admin') { 
+
+							?>
+									<a href="edit.php?id=<?=$film['id']?>" class="button button--edit">Редактировать</a>
+									<a href="?action=delete&id=<?=$film['id']?>" class="button button--removesmall">Удалить</a>
+
+							<?php } 
+								
+								}
+
+							?>
+							
+							
 						</div>
 					</div>
 					
