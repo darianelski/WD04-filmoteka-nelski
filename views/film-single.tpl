@@ -2,8 +2,8 @@
 
 		<div class="card mb-20">
 			<div class="row">
-				<div class="col">
-					<img src="<?=HOST?>	php-lessons/WD04-filmoteka-nelski/data/films/altlas.jpg" alt="<?=$film['title']?>">
+				<div class="col-auto">
+					<img src="<?=HOST?>php-lessons/WD04-filmoteka-nelski/data/films/full/<?=$film['photo']?>" alt="<?=$film['title']?>">
 				</div>
 				<div class="col">
 					<div class="card__header">

@@ -6,7 +6,7 @@
 		<div class="card mb-20">
 			<div class="row">
 				<div class="col-auto">
-					<img height="200" src="<?=HOST?>	php-lessons/WD04-filmoteka-nelski/data/films/altlas.jpg" alt="<?=$film['title']?>">
+					<img height="200" src="<?=HOST?>	php-lessons/WD04-filmoteka-nelski/data/films/min/<?=$film['photo']?>" alt="<?=$film['title']?>">
 				</div>
 				<div class="col">
 					<div class="card__header">
