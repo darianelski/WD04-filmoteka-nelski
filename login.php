@@ -11,7 +11,7 @@ if (isset($_POST['enter'])) {
 		if ($_POST['password'] == $userPassword ) {
 
 			$_SESSION['user'] = 'admin';
-			header('Location: ' . HOST . 'php-lessons/WD04-filmoteka-nelski/index.php');
+			header('Location: ' . HOST . 'index.php');
 		}
 	}
 }

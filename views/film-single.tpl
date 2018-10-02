@@ -3,7 +3,7 @@
 		<div class="card mb-20">
 			<div class="row">
 				<div class="col-auto">
-					<img src="<?=HOST?>php-lessons/WD04-filmoteka-nelski/data/films/full/<?=$film['photo']?>" alt="<?=$film['title']?>">
+					<img src="<?=HOST?>/data/films/full/<?=$film['photo']?>" alt="<?=$film['title']?>">
 				</div>
 				<div class="col">
 					<div class="card__header">
